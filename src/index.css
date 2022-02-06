@@ -1,0 +1,150 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier Prime', monospace;
+}
+p {
+  margin-bottom: 0 !important;
+}
+
+h2,h1,h3,h4,h5,h6{
+  margin-bottom: 0 !important;
+}
+
+.background {
+  background: url("./images/Main Dashboard/Background.png");
+  background-size: cover;
+}
+.p-background {
+  background: url("./images/Main Dashboard/Gem Pouch Bright.png");
+  background-size: cover;
+  
+}
+.r-background {
+  background: url("./images/Rewards Menu/BACKGROUND.png");
+  background-size: 100% 130% ;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1244px!important;
+  }
+}
+.active{
+  background: #f2415f;
+  color: white;
+}
+a{
+  text-decoration: none!important;
+}
+.pd{
+  border: 2px solid #f440e8;
+}
+.bd{
+  border: 2px solid #f2415f;
+}
+.logo{
+  width: 100%;
+  height: 112px;
+  object-fit: cover;
+  margin-top: -15px;
+}
+.head1{
+  width: 100%;
+  height: 82px;
+  /* objectFit: "cover", marginLeft:"-20px", marginTop:"-10px" */
+  object-fit: cover;
+  margin-left: -20px;
+  margin-top:-20px;
+}
+.head2{
+  width: 100%;
+  height: 100px;
+  /* objectFit: "cover", marginLeft:"-20px", marginTop:"-10px" */
+  object-fit: contain;
+  margin-left: -20px;
+  margin-top:-20px;
+}
+.page1Bottom{
+  padding-top: 183px;
+}
+.gameStates{
+  left: -150px;
+}
+@media (max-width: 780px) {
+  .page1Bottom{
+    padding-top: 20px;
+  }
+  .gameStates{
+    left: -10px;
+  }
+  .logo{
+    width: 100%;
+    height: 50px;
+    object-fit: contain;
+    margin-top: 0px;
+  }
+  .head1{
+    width: 100%;
+    height: 40px;
+    /* objectFit: "cover", marginLeft:"-20px", marginTop:"-10px" */
+    object-fit: contain;
+    margin-left: 0;
+    margin-top:0;
+  }
+}
+.rd{
+  border: 2px solid blue;
+}
+
+/* pirats */
+
+.piratrs-bg{
+  background: #ff669edc;
+ 
+}
+.inventory-bg{
+  background: #e6388fdc;
+ 
+}
+.bg-blur{
+  background: rgba(255, 255, 255, 0.158);
+}
+.rum-bg{
+  background: #41daa2e3;
+ 
+}
+.items-bg{
+  background: #63b4dfe1;
+ 
+}
+.store-bg{
+  background: #f2ad3ddc;
+ 
+}
+.pou-bg{
+  background: #d8d48ae3;
+ 
+}
+.reward-bg{
+  background: rgba(243, 240, 240, 0.767);
+ 
+}
+.dubs{
+  background: #fa6ba0;
+}
+.sw{
+  box-shadow: 6px 6px 8px 0px #36343477;
+}
+.blk{
+  color: #FFF;
+}
+.box-white{
+  background: rgba(255, 255, 255, 0.8);
+}
