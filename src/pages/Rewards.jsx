@@ -67,13 +67,14 @@ const Rewards = ({showModal}) => {
       />
       <div className=" min-h-screen lg:p-8 flex items-center justify-center">
         <div className="  r-background pd w-full h-full ">
-          <div className="reward-bg lg:px-4">
+          <div className="reward-bg lg:px-9">
             <div className="grid grid-cols-2  gap-1">
               <div>
                 <img
                  
                   
                   className="h-28 reward-logo"
+                  style={{ objectFit:"contain" }}
                   src={inventory}
                   alt=""
                 />
@@ -185,7 +186,7 @@ const Rewards = ({showModal}) => {
                         </button>
                       </div>
                       <div className="flex h-100 flex-col gap-1 items-center justify-center">
-                        <h1 className="text-lg text-gray-600">
+                        <h1 className="text-lg text-gray-600 w-full text-center">
                           circ. supply locked
                         </h1>
                         <h1 className="text-lg text-font font-bold">69%</h1>
@@ -219,7 +220,7 @@ const Rewards = ({showModal}) => {
                         </button>
                       </div>
                       <div className="flex flex-col gap-1 items-center justify-center">
-                        <h1 className="text-lg text-gray-600">
+                        <h1 className="text-lg text-gray-600 w-full text-center">
                           $doubs reflections
                         </h1>
                         <h1 className="text-lg text-font font-bold">1758654</h1>

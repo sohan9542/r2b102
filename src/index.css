@@ -37,7 +37,7 @@ h6 {
 
 .r-background {
   background: url("./images/Rewards Menu/BACKGROUND.png");
-  background-size: 100% 130%;
+  background-size: cover;
 }
 
 @media (min-width: 1200px) {
@@ -54,7 +54,9 @@ h6 {
 a {
   text-decoration: none !important;
 }
-
+.botom_head{
+  margin-bottom: -17px;
+}
 .pd {
   border: 2px solid #f440e8;
 }
@@ -241,6 +243,9 @@ a {
     object-fit: cover;
     top: -27px;
     left: -30px;
+  }
+  .botom_head{
+    margin-bottom: -35px;
   }
   .page_invetory{
     width: 40%;

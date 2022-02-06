@@ -51,9 +51,18 @@ const Page1 = () => {
         onHide={() => setModalShow(false)}
       />
       <div className=" min-h-screen w-full container pt-3">
-        <div className=" w-full box-white sw h-36 lg:h-20 pd rounded-md">
+        <div className=" w-full box-white sw h-52 lg:h-20 pd rounded-md">
           <div className="w-full flex items-center h-full justify-center flex-col lg:grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div className="flex items-center ">
+            <div className="lg:flex hidden items-center ">
+              <img
+                onClick={goToHome}
+                className="logo cursor-pointer"
+                src={logo}
+                alt=""
+              />
+              <img className="head1" src={head1} alt="" />
+            </div>
+            <div className="flex lg:hidden items-center flex-wrap ">
               <img
                 onClick={goToHome}
                 className="logo cursor-pointer"

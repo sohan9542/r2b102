@@ -69,7 +69,7 @@ const Store = ({showModal}) => {
   };
   const [modalShow, setModalShow] = useState(false);
   return (
-    <div className="w-full  ">
+    <div className="w-full">
       <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}
@@ -77,9 +77,9 @@ const Store = ({showModal}) => {
       <div className=" min-h-screen lg:p-8 flex items-center justify-center">
         <div className="  p-background pd w-full h-full ">
           <div className="store-bg lg:px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
+            <div className="grid pt-4 grid-cols-2 items-center lg:grid-cols-4 gap-1">
               <div>
-                <img src={inventory} alt="" />
+                <img   src={inventory} alt="" />
               </div>
               <div className="hidden lg:block"></div>
               <div className="hidden lg:block"></div>
@@ -99,7 +99,7 @@ const Store = ({showModal}) => {
                
               </div>
             </div>
-            <div className="py-16 grid grid-cols-1 gap-3 lg:gap-0 md:grid-cols-2 items-center lg:grid-cols-5">
+            <div className="py-10 lg:py-24 grid grid-cols-1 gap-3 lg:gap-0 md:grid-cols-2 items-center lg:grid-cols-5">
               <div className="px-3 lg:px-5 ">
                
               </div>
@@ -132,10 +132,10 @@ const Store = ({showModal}) => {
                 ))}
               </div>
             
-              <div className="px-5  flex flex-col ">
+              <div className="px-5 items-center  flex flex-col ">
                 <div
                  
-                  className="bg-pr pd uppercase cursor-pointer sw text-center text-xs lg:text-xl px-2 py-2 hover:bg-purp hover:text-white  rounded-md"
+                  className="bg-pr w-24 pd uppercase cursor-pointer sw text-center text-xs lg:text-xl px-2 py-2 hover:bg-purp hover:text-white  rounded-md"
                 >
                   Buy
                 </div>
@@ -150,9 +150,11 @@ const Store = ({showModal}) => {
 
                 <div className="w-full flex items-center justify-end">
                   <div>
-                    <img
-                      className="h-32"
-                      style={{ marginBottom: "-17px" }}
+                  <img
+                      className="h-32 botom_head"
+                      
+
+                      style={{ objectFit:"contain" }}
                       src={head1}
                       alt=""
                     />

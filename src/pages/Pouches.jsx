@@ -14,7 +14,7 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Body>
-        <div className="w-full pd rounded-xl">
+        <div className="w-full bg-white pd ">
           <div className="w-full flex items-center justify-end">
             <img
               onClick={props.onHide}
@@ -80,7 +80,11 @@ const Pouches = ({  showpage, setShowpage,showModal }) => {
           <div className="pou-bg  lg:px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
               <div>
-                <img src={inventory} alt="" />
+                <img  style={{
+                      width: "100%",
+                      height: "95px",
+                      objectFit: "cover",
+                    }} src={inventory} alt="" />
               </div>
               <div className="hidden lg:block"></div>
               <div className="hidden lg:block"></div>
@@ -100,7 +104,7 @@ const Pouches = ({  showpage, setShowpage,showModal }) => {
                
               </div>
             </div>
-            <div className="py-16 grid grid-cols-1 gap-3 lg:gap-0 md:grid-cols-2 items-center lg:grid-cols-5">
+            <div className="py-10 lg:py-24 grid grid-cols-1 gap-3 lg:gap-0 md:grid-cols-2 items-center lg:grid-cols-5">
             <div className="px-3 lg:px-5  flex  flex-col uppercase">
                   <div
                     onClick={() => {
@@ -172,10 +176,10 @@ const Pouches = ({  showpage, setShowpage,showModal }) => {
                 ))}
               </div>
              
-              <div className="px-5  flex flex-col">
+              <div className="px-5  flex flex-col items-center">
                
                
-                  <div  onClick={() => setModalShow(true)} className="bg-pr pd uppercase cursor-pointer sw text-center text-xs lg:text-xl px-2 py-2 hover:bg-purp pd hover:text-white  rounded-md">
+                  <div  onClick={() => setModalShow(true)} className="bg-pr w-28 pd uppercase cursor-pointer sw text-center text-xs lg:text-xl px-2 py-2 hover:bg-purp pd hover:text-white  rounded-md">
                     open
                   </div>
                
@@ -189,9 +193,11 @@ const Pouches = ({  showpage, setShowpage,showModal }) => {
                 
                 <div className="w-full flex items-center justify-end">
                   <div>
-                    <img
-                      className="h-32"
-                      style={{ marginBottom: "-17px" }}
+                  <img
+                      className="h-32 botom_head"
+                      
+
+                      style={{ objectFit:"contain" }}
                       src={head1}
                       alt=""
                     />
