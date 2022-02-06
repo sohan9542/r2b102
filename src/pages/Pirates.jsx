@@ -9,8 +9,8 @@ const Pirates = ({ showModal }) => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const [active, setactive] = useState(1);
   return (
-    <div className="w-full bg-blur">
-      <div className=" min-h-screen container bg-blur flex items-center justify-center">
+    <div className="w-full ">
+      <div className=" min-h-screen container flex items-center justify-center">
         <div className="p-background  pd w-full h-full rounded-3xl">
           <div className="piratrs-bg p-2 rounded-3xl lg:px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
