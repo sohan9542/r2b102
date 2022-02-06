@@ -3,17 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Courier Prime', monospace;
 }
+
 p {
   margin-bottom: 0 !important;
 }
 
-h2,h1,h3,h4,h5,h6{
+h2,
+h1,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 0 !important;
 }
 
@@ -21,133 +28,301 @@ h2,h1,h3,h4,h5,h6{
   background: url("./images/Main Dashboard/Background.png");
   background-size: cover;
 }
+
 .p-background {
   background: url("./images/Main Dashboard/Gem Pouch Bright.png");
   background-size: cover;
-  
+
 }
+
 .r-background {
   background: url("./images/Rewards Menu/BACKGROUND.png");
-  background-size: 100% 130% ;
+  background-size: 100% 130%;
 }
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1244px!important;
+    max-width: 1244px !important;
   }
 }
-.active{
+
+.active {
   background: #f2415f;
   color: white;
 }
-a{
-  text-decoration: none!important;
+
+a {
+  text-decoration: none !important;
 }
-.pd{
+
+.pd {
   border: 2px solid #f440e8;
 }
-.bd{
+
+.bd {
   border: 2px solid #f2415f;
 }
-.logo{
+
+.logo {
   width: 100%;
   height: 112px;
   object-fit: cover;
   margin-top: -15px;
 }
-.head1{
+
+.head1 {
   width: 100%;
   height: 82px;
   /* objectFit: "cover", marginLeft:"-20px", marginTop:"-10px" */
   object-fit: cover;
   margin-left: -20px;
-  margin-top:-20px;
+  margin-top: -20px;
 }
-.head2{
+
+.head2 {
   width: 100%;
   height: 100px;
   /* objectFit: "cover", marginLeft:"-20px", marginTop:"-10px" */
   object-fit: contain;
   margin-left: -20px;
-  margin-top:-20px;
+  margin-top: -20px;
 }
-.page1Bottom{
+
+.page1Bottom {
   padding-top: 183px;
 }
-.gameStates{
+
+.gameStates {
   left: -150px;
 }
-@media (max-width: 780px) {
-  .page1Bottom{
-    padding-top: 20px;
-  }
-  .gameStates{
-    left: -10px;
-  }
-  .logo{
-    width: 100%;
-    height: 50px;
-    object-fit: contain;
-    margin-top: 0px;
-  }
-  .head1{
-    width: 100%;
-    height: 40px;
-    /* objectFit: "cover", marginLeft:"-20px", marginTop:"-10px" */
-    object-fit: contain;
-    margin-left: 0;
-    margin-top:0;
-  }
-}
-.rd{
+
+
+
+.rd {
   border: 2px solid blue;
 }
 
 /* pirats */
 
-.piratrs-bg{
+.piratrs-bg {
   background: #ff669edc;
- 
+
 }
-.inventory-bg{
+
+.inventory-bg {
   background: #e6388fdc;
- 
+
 }
-.bg-blur{
+
+.bg-blur {
   background: rgba(255, 255, 255, 0.158);
 }
-.rum-bg{
+
+.rum-bg {
   background: #41daa2e3;
- 
+
 }
-.items-bg{
+
+.items-bg {
   background: #63b4dfe1;
- 
+
 }
-.store-bg{
+
+.store-bg {
   background: #f2ad3ddc;
- 
+
 }
-.pou-bg{
+
+.pou-bg {
   background: #d8d48ae3;
- 
+
 }
-.reward-bg{
+
+.reward-bg {
   background: rgba(243, 240, 240, 0.767);
- 
+
 }
-.dubs{
+
+.dubs {
   background: #fa6ba0;
 }
-.sw{
+
+.sw {
   box-shadow: 6px 6px 8px 0px #36343477;
 }
-.blk{
+
+.blk {
   color: #FFF;
 }
-.box-white{
+
+.box-white {
   background: rgba(255, 255, 255, 0.8);
 }
-.modal-content{
-  background:none!important;
+
+.modal-content {
+  background: none !important;
+  border: none !important;
+}
+.modal {
+  padding-left: 0px!important;
+}
+
+.reward_1{
+  width: 40%;
+  height: 90px;
+  object-fit: contain;
+  top: -36px;
+  left: -122px;
+}
+.reward_2{
+  width: 40%;
+  height: 90px;
+  object-fit: contain;
+  top: -36px;
+  left: -134px;
+}
+.reward_3{
+  width: 40%;
+  height: 90px;
+  object-fit: contain;
+  top: -36px;
+  left: -50px;
+}
+.reward-logo{
+  margin-left: -70px;
+}
+.page_doubs{
+  width: 40%;
+  height: 50px;
+  object-fit: cover;
+  top: -27px;
+  left: -50px;
+}
+.page_pirates{
+  width: 40%;
+  height: 50px;
+  object-fit: cover;
+  top: -32px;
+  left: -50px;
+}
+.page_voubs{
+  width: 40%;
+  height: 50px;
+  object-fit: cover;
+  top: -32px;
+  left: -42px;
+}
+.page_rumrut{
+  width: 40%;
+  height: 50px;
+  object-fit: cover;
+  top: -32px;
+  left: -15px;
+}
+.page_compass{
+  width: 40%;
+  height: 50px;
+  object-fit: cover;
+  top: -32px;
+  left: -42px;
+}
+.page_invetory{
+  width: 40%;
+  height: 50px;
+  object-fit: cover;
+  top: -32px;
+  left: -43px;
+}
+/* mobile */
+@media (max-width: 780px) {
+  .page_doubs{
+    width: 40%;
+    height: 50px;
+    object-fit: cover;
+    top: -27px;
+    left: -30px;
+  }
+  .page_invetory{
+    width: 40%;
+    height: 50px;
+    object-fit: cover;
+    top: -32px;
+    left: -25px;
+  }
+  .page_compass{
+    width: 40%;
+    height: 50px;
+    object-fit: cover;
+    top: -32px;
+    left: -20px;
+  }
+  .page_voubs{
+    width: 40%;
+    height: 50px;
+    object-fit: cover;
+    top: -32px;
+    left: -20px;
+  }
+  .page_rumrut{
+    width: 40%;
+    height: 50px;
+    object-fit: cover;
+    top: -32px;
+    left: -5px;
+  }
+  .page_pirates{
+    width: 40%;
+    height: 50px;
+    object-fit: cover;
+    top: -32px;
+    left: -32px;
+  }
+  .page1Bottom {
+    padding-top: 20px;
+  }
+
+  .gameStates {
+    left: -10px;
+  }
+
+  .logo {
+    width: 100%;
+    height: 50px;
+    object-fit: contain;
+    margin-top: 0px;
+  }
+
+  .head1 {
+    width: 100%;
+    height: 40px;
+    /* objectFit: "cover", marginLeft:"-20px", marginTop:"-10px" */
+    object-fit: contain;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .reward_1{
+    width: 40%;
+    height: 90px;
+    object-fit: contain;
+    top: -25px;
+    left: -30px;
+  }
+  .reward_2{
+    width: 40%;
+    height: 90px;
+    object-fit: contain;
+    top: -25px;
+    left: -34px;
+  }
+  .reward_3{
+    width: 40%;
+    height: 90px;
+    object-fit: contain;
+    top: -22px;
+    left: 7px;
+  }
+  .reward-logo{
+    margin-left: -30px;
+  }
+  
 }

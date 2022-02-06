@@ -20,27 +20,7 @@ const App = () => {
           <Route path="/" exact>
           <Page1 />
           </Route>
-          <Route path="/pirates">
-          <Pirates />
-          </Route>
-          <Route path="/inventory">
-          <Inventory1 />
-          </Route>
-          <Route path="/rum">
-          <Rum />
-          </Route>
-          <Route path="/items">
-          <Items />
-          </Route>
-          <Route path="/gem-pouches">
-          <Pouches />
-          </Route>
-          <Route path="/store">
-          <Store />
-          </Route>
-          <Route path="/rewards">
-          <Rewards />
-          </Route>
+         
         </Switch>
       </Router>
     

@@ -28,12 +28,14 @@ const Page1 = () => {
     return (
       <Modal
         {...props}
+        size="xl"
         aria-labelledby="contained-modal-title-vcenter"
         centered
+        style={{paddingLeft:"0px"}}
       >
         
         {showpage === 1 &&   <Pirates showModal={setModalShow}/>}
-        {showpage === 2 &&   <Inventory1 showpage={showpage}  showModal={setModalShow}/>}
+        {showpage === 2 &&   <Inventory1 showpage={showpage}  showModal={setModalShow} setShowpage={setShowpage}/>}
         {showpage === 3 &&   <Rewards showModal={setModalShow}/>}
         {showpage === 4 &&   <Store showModal={setModalShow}/>}
         
@@ -45,7 +47,7 @@ const Page1 = () => {
     <div className="background min-h-screen w-full">
       <MyVerticallyCenteredModal
         show={modalShow}
-        fullscreen={true}
+        
         onHide={() => setModalShow(false)}
       />
       <div className=" min-h-screen w-full container pt-3">
@@ -118,14 +120,8 @@ const Page1 = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 mt-3">
           <div className=" flex items-center relative pl-0 lg:pl-16">
             <img
-              className="absolute"
-              style={{
-                width: "40%",
-                height: "50px",
-                objectFit: "cover",
-                top: "-27px",
-                left: "-50px",
-              }}
+              className="absolute page_doubs"
+             
               src={doubs}
               alt=""
             />
@@ -152,14 +148,8 @@ const Page1 = () => {
           </div>
           <div className=" flex items-center relative pl-0 lg:pl-16">
             <img
-              className="absolute"
-              style={{
-                width: "40%",
-                height: "50px",
-                objectFit: "cover",
-                top: "-32px",
-                left: "-50px",
-              }}
+              className="absolute page_pirates"
+              
               src={pirates}
               alt=""
             />
@@ -181,14 +171,8 @@ const Page1 = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 mt-14">
           <div className=" flex items-center relative pl-0 lg:pl-16">
             <img
-              className="absolute"
-              style={{
-                width: "40%",
-                height: "50px",
-                objectFit: "cover",
-                top: "-32px",
-                left: "-42px",
-              }}
+              className="absolute page_voubs"
+              
               src={vdoubs}
               alt=""
             />
@@ -208,14 +192,8 @@ const Page1 = () => {
           </div>
           <div className=" flex items-center relative pl-0 lg:pl-16">
             <img
-              className="absolute"
-              style={{
-                width: "40%",
-                height: "50px",
-                objectFit: "cover",
-                top: "-32px",
-                left: "-15px",
-              }}
+              className="absolute page_rumrut"
+            
               src={rumrut}
               alt=""
             />
@@ -237,14 +215,8 @@ const Page1 = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 mt-14">
           <div className=" flex items-center relative pl-0 lg:pl-16">
             <img
-              className="absolute"
-              style={{
-                width: "40%",
-                height: "50px",
-                objectFit: "cover",
-                top: "-32px",
-                left: "-42px",
-              }}
+              className="absolute page_compass"
+             
               src={compass}
               alt=""
             />
@@ -268,14 +240,8 @@ const Page1 = () => {
           </div>
           <div className=" flex items-center relative pl-0 lg:pl-16">
             <img
-              className="absolute"
-              style={{
-                width: "40%",
-                height: "50px",
-                objectFit: "cover",
-                top: "-32px",
-                left: "-43px",
-              }}
+              className="absolute page_invetory"
+              
               src={inventory}
               alt=""
             />

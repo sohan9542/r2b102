@@ -56,7 +56,7 @@ function MyVerticallyCenteredModal(props) {
     </Modal>
   );
 }
-const Pouches = () => {
+const Pouches = ({  showpage, setShowpage,showModal }) => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const [selecteItem, setSelecteItem] = useState([1]);
   const saveActivitem = (item) => {
@@ -75,9 +75,9 @@ const Pouches = () => {
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-      <div className=" min-h-screen container p-8 flex items-center justify-center">
-        <div className="  p-background pd w-full h-full rounded-3xl">
-          <div className="pou-bg rounded-3xl lg:px-4">
+      <div className=" min-h-screen lg:p-8 flex items-center justify-center">
+        <div className="  p-background pd w-full h-full ">
+          <div className="pou-bg  lg:px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
               <div>
                 <img src={inventory} alt="" />
@@ -85,8 +85,9 @@ const Pouches = () => {
               <div className="hidden lg:block"></div>
               <div className="hidden lg:block"></div>
               <div className="w-full flex items-center justify-end">
-                <Link to="/">
+               
                   <img
+                  onClick={()=>showModal(false)}
                     style={{
                       width: "80px",
                       height: "80px",
@@ -96,40 +97,52 @@ const Pouches = () => {
                     src={close}
                     alt=""
                   />
-                </Link>
+               
               </div>
             </div>
             <div className="py-16 grid grid-cols-1 gap-3 lg:gap-0 md:grid-cols-2 items-center lg:grid-cols-5">
-              <div className="px-3 lg:px-5 flex  flex-col uppercase">
-                <NavLink
-                  to="/inventory"
-                  activeClassName="blk"
-                  className="text-2xl text-gray-800"
-                >
-                  Gems
-                </NavLink>
-                <NavLink
-                  to="/rum"
-                  activeClassName="blk"
-                  className="text-2xl text-gray-800"
-                >
-                  rum
-                </NavLink>
-                <NavLink
-                  to="/items"
-                  activeClassName="blk"
-                  className="text-2xl text-gray-800"
-                >
-                  items
-                </NavLink>
-                <NavLink
-                  to="/gem-pouches"
-                  activeClassName="blk"
-                  className="text-2xl text-gray-800"
-                >
-                  gem pouches
-                </NavLink>
-              </div>
+            <div className="px-3 lg:px-5  flex  flex-col uppercase">
+                  <div
+                    onClick={() => {
+                      setShowpage(2);
+                    }}
+                    className={
+                      showpage === 2 ? "blk text-2xl cursor-pointer" : "text-2xl cursor-pointer text-gray-800"
+                    }
+                  >
+                    Gems
+                  </div>
+                  <div
+                    onClick={() => {
+                      setShowpage(6);
+                    }}
+                    className={
+                      showpage === 6 ? "blk text-2xl cursor-pointer" : "text-2xl cursor-pointer text-gray-800"
+                    }
+                  >
+                    rum
+                  </div>
+                  <div
+                    onClick={() => {
+                      setShowpage(7);
+                    }}
+                    className={
+                      showpage === 7 ? "blk text-2xl cursor-pointer" : "text-2xl cursor-pointer text-gray-800"
+                    }
+                  >
+                    items
+                  </div>
+                  <div
+                    onClick={() => {
+                      setShowpage(8);
+                    }}
+                    className={
+                      showpage === 8 ? "blk text-2xl cursor-pointer" : "text-2xl cursor-pointer text-gray-800"
+                    }
+                  >
+                    gem pouches
+                  </div>
+                </div>
               <div className=" lg:col-span-3 grid  grid-cols-5 gap-x-4 gap-y-2">
                 {arr.map((item) => (
                   <div

@@ -74,9 +74,9 @@ const Store = ({showModal}) => {
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-      <div className=" min-h-screen container p-8 flex items-center justify-center">
-        <div className="  p-background pd w-full h-full rounded-3xl">
-          <div className="store-bg rounded-3xl lg:px-4">
+      <div className=" min-h-screen lg:p-8 flex items-center justify-center">
+        <div className="  p-background pd w-full h-full ">
+          <div className="store-bg lg:px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
               <div>
                 <img src={inventory} alt="" />

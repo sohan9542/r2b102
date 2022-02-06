@@ -6,6 +6,9 @@ import close from "../images/Rewards Menu/CLOSE X.png";
 import { Link, NavLink } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import Rum from "./Rum";
+import Items from "./Items";
+import Pouches from "./Pouches";
 function MyVerticallyCenteredModal(props) {
   return (
     <Modal
@@ -15,7 +18,7 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Body>
-        <div className="w-full pd rounded-xl">
+        <div className="w-full bg-white pd ">
           <div className="w-full flex items-center justify-end">
             <img
               onClick={props.onHide}
@@ -52,10 +55,10 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 
-const Inventory1 = ({ showModal, showpage }) => {
-  console.log(showModal);
+const Inventory1 = ({ showModal }) => {
   const history = useHistory();
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const [showpage, setShowpage] = useState(2);
   const [selecteItem, setSelecteItem] = useState([1]);
   const saveActivitem = (item) => {
     const newarr = [item, ...selecteItem];
@@ -70,127 +73,144 @@ const Inventory1 = ({ showModal, showpage }) => {
   };
   const [modalShow, setModalShow] = useState(false);
   return (
-    <div className="w-full  ">
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-      <div className=" min-h-screen container p-8 flex items-center justify-center">
-        <div className="  p-background pd w-full h-full rounded-3xl">
-          <div className="inventory-bg rounded-3xl lg:px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
-              <div>
-                <img src={inventory} alt="" />
-              </div>
-              <div className="hidden lg:block"></div>
-              <div className="hidden lg:block"></div>
-              <div className="w-full flex items-center justify-end">
-                <img
-                  onClick={showpage ? () => showModal(false) : () => goBack()}
-                  style={{
-                    width: "80px",
-                    height: "80px",
-                    objectFit: "cover",
-                  }}
-                  className="cursor-pointer"
-                  src={close}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="py-16 grid grid-cols-1 gap-3 lg:gap-0 md:grid-cols-2 items-center lg:grid-cols-5">
-              <div className="px-3 lg:px-5  flex  flex-col uppercase">
-                <NavLink
-                  to="/inventory"
-                  activeClassName="blk"
-                  className={
-                    showpage ? "blk text-2xl" : "text-2xl text-gray-800"
-                  }
-                >
-                  Gems
-                </NavLink>
-                <NavLink
-                  to="/rum"
-                  activeClassName="blk"
-                  className="text-2xl text-gray-800"
-                >
-                  rum
-                </NavLink>
-                <NavLink
-                  to="/items"
-                  activeClassName="blk"
-                  className="text-2xl text-gray-800"
-                >
-                  items
-                </NavLink>
-                <NavLink
-                  to="/gem-pouches"
-                  activeClassName="blk"
-                  className="text-2xl text-gray-800"
-                >
-                  gem pouches
-                </NavLink>
-              </div>
-              <div className=" lg:col-span-3 grid  grid-cols-5 gap-x-4 gap-y-2">
-                {arr.map((item) => (
-                  <div
-                    className={
-                      selecteItem.find((i) => i === item)
-                        ? "p-3 rounded-xl bg-gray-300 "
-                        : "p-3"
-                    }
-                  >
-                    <img
-                      className={
-                        selecteItem.find((i) => i === item)
-                          ? " cursor-pointer"
-                          : " cursor-pointer sw"
-                      }
-                      onClick={
-                        selecteItem.find((i) => i === item)
-                          ? () => removeSelect(item)
-                          : () => saveActivitem(item)
-                      }
-                      key={item}
-                      src={dummy}
-                      style={{ height: "100%", width: "100%" }}
-                      alt=""
-                    />
-                  </div>
-                ))}
-              </div>
-
-              <div className="px-5 flex flex-col ">
-                <div
-                  onClick={() => setModalShow(true)}
-                  className="bg-pr pd uppercase cursor-pointer sw text-center text-xs lg:text-xl px-2 py-2 hover:bg-purp hover:text-white  rounded-md"
-                >
-                  burn
+    <>
+    { showpage === 2 && <div className="w-full  ">
+        <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
+        <div className=" min-h-screen lg:p-8 flex items-center justify-center">
+          <div className="  p-background pd w-full h-full ">
+            <div className="inventory-bg  lg:px-4">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
+                <div>
+                  <img src={inventory} alt="" />
+                </div>
+                <div className="hidden lg:block"></div>
+                <div className="hidden lg:block"></div>
+                <div className="w-full flex items-center justify-end">
+                  <img
+                    onClick={showpage ? () => showModal(false) : () => goBack()}
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      objectFit: "cover",
+                    }}
+                    className="cursor-pointer"
+                    src={close}
+                    alt=""
+                  />
                 </div>
               </div>
-            </div>
-            <div className="py-2 px-3 lg:px-5">
-              <h4 className=" uppercase">properties</h4>
-              <div className="my-3 w-full rounded-2xl px-4  py-2 pd box-white">
-                <h4 className=" uppercase font-light py-1">item : sapphire</h4>
-                <h4 className=" uppercase font-light py-1">grade : clear</h4>
+              <div className="py-16 grid grid-cols-1 gap-3 lg:gap-0 md:grid-cols-2 items-center lg:grid-cols-5">
+                <div className="px-3 lg:px-5  flex  flex-col uppercase">
+                  <div
+                    onClick={() => {
+                      setShowpage(2);
+                    }}
+                    className={
+                      showpage === 2 ? "blk text-2xl cursor-pointer" : "text-2xl cursor-pointer text-gray-800"
+                    }
+                  >
+                    Gems
+                  </div>
+                  <div
+                    onClick={() => {
+                      setShowpage(6);
+                    }}
+                    className={
+                      showpage === 6 ? "blk text-2xl cursor-pointer" : "text-2xl cursor-pointer text-gray-800"
+                    }
+                  >
+                    rum
+                  </div>
+                  <div
+                    onClick={() => {
+                      setShowpage(7);
+                    }}
+                    className={
+                      showpage === 7 ? "blk text-2xl cursor-pointer" : "text-2xl cursor-pointer text-gray-800"
+                    }
+                  >
+                    items
+                  </div>
+                  <div
+                    onClick={() => {
+                      setShowpage(8);
+                    }}
+                    className={
+                      showpage === 8 ? "blk text-2xl cursor-pointer" : "text-2xl cursor-pointer text-gray-800"
+                    }
+                  >
+                    gem pouches
+                  </div>
+                </div>
+                <div className=" lg:col-span-3 grid  grid-cols-5 gap-x-4 gap-y-2">
+                  {arr.map((item) => (
+                    <div
+                      className={
+                        selecteItem.find((i) => i === item)
+                          ? "p-3 rounded-xl bg-gray-300 "
+                          : "p-3"
+                      }
+                    >
+                      <img
+                        className={
+                          selecteItem.find((i) => i === item)
+                            ? " cursor-pointer"
+                            : " cursor-pointer sw"
+                        }
+                        onClick={
+                          selecteItem.find((i) => i === item)
+                            ? () => removeSelect(item)
+                            : () => saveActivitem(item)
+                        }
+                        key={item}
+                        src={dummy}
+                        style={{ height: "100%", width: "100%" }}
+                        alt=""
+                      />
+                    </div>
+                  ))}
+                </div>
 
-                <div className="w-full flex items-center justify-end">
-                  <div>
-                    <img
-                      className="h-32"
-                      style={{ marginBottom: "-17px" }}
-                      src={head1}
-                      alt=""
-                    />
+                <div className="px-5 flex flex-col ">
+                  <div
+                    onClick={() => setModalShow(true)}
+                    className="bg-pr pd uppercase cursor-pointer sw text-center text-xs lg:text-xl px-2 py-2 hover:bg-purp hover:text-white  rounded-md"
+                  >
+                    burn
+                  </div>
+                </div>
+              </div>
+              <div className="py-2 px-3 lg:px-5">
+                <h4 className=" uppercase">properties</h4>
+                <div className="my-3 w-full rounded-2xl px-4  py-2 pd box-white">
+                  <h4 className=" uppercase font-light py-1">
+                    item : sapphire
+                  </h4>
+                  <h4 className=" uppercase font-light py-1">grade : clear</h4>
+
+                  <div className="w-full flex items-center justify-end">
+                    <div>
+                      <img
+                        className="h-32"
+                        style={{ marginBottom: "-17px" }}
+                        src={head1}
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>}
+    { showpage === 6 && <Rum showModal={showModal} showpage={showpage} setShowpage={setShowpage}/>}
+    { showpage === 7 && <Items showModal={showModal} showpage={showpage} setShowpage={setShowpage}/>}
+    { showpage === 8 && <Pouches showModal={showModal} showpage={showpage} setShowpage={setShowpage}/>}
+    </>
   );
 };
 

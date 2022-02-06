@@ -16,7 +16,7 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Body>
-        <div className="w-full pd rounded-xl">
+        <div className="w-full pd">
           <div className="w-full flex items-center justify-end">
             <img
               onClick={props.onHide}
@@ -65,14 +65,15 @@ const Rewards = ({showModal}) => {
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-      <div className=" min-h-screen container p-8 flex items-center justify-center">
-        <div className="  r-background pd w-full h-full rounded-3xl">
-          <div className="reward-bg rounded-3xl lg:px-4">
+      <div className=" min-h-screen lg:p-8 flex items-center justify-center">
+        <div className="  r-background pd w-full h-full ">
+          <div className="reward-bg lg:px-4">
             <div className="grid grid-cols-2  gap-1">
               <div>
                 <img
-                  style={{ marginLeft: "-70px" }}
-                  className="h-28"
+                 
+                  
+                  className="h-28 reward-logo"
                   src={inventory}
                   alt=""
                 />
@@ -102,16 +103,10 @@ const Rewards = ({showModal}) => {
                     earn $compass rewards
                   </h4>
                 </div>
-                <div className=" flex items-center relative pl-0 lg:pl-16">
+                <div className=" flex items-center pt-4 lg:pt-0 relative pl-0 lg:pl-16">
                   <img
-                    className="absolute"
-                    style={{
-                      width: "40%",
-                      height: "90px",
-                      objectFit: "contain",
-                      top: "-48px",
-                      left: "-130px",
-                    }}
+                    className="absolute reward_1"
+                  
                     src={gamestats}
                     alt=""
                   />
@@ -154,16 +149,10 @@ const Rewards = ({showModal}) => {
                     additional rewards in $compass & $weth
                   </h4>
                 </div>
-                <div className=" flex items-center relative pl-0 lg:pl-16">
+                <div className=" flex items-center pt-4 lg:pt-0 relative pl-0 lg:pl-16">
                   <img
-                    className="absolute"
-                    style={{
-                      width: "40%",
-                      height: "90px",
-                      objectFit: "contain",
-                      top: "-48px",
-                      left: "-134px",
-                    }}
+                    className="absolute reward_2"
+                    
                     src={lock}
                     alt=""
                   />
@@ -210,16 +199,10 @@ const Rewards = ({showModal}) => {
                     for voting
                   </h4>
                 </div>
-                <div className=" flex items-center relative pl-0 lg:pl-16">
+                <div className=" flex items-center pt-4 lg:pt-0 relative pl-0 lg:pl-16">
                   <img
-                    className="absolute"
-                    style={{
-                      width: "40%",
-                      height: "90px",
-                      objectFit: "contain",
-                      top: "-48px",
-                      left: "-50px",
-                    }}
+                    className="absolute reward_3"
+                   
                     src={gov}
                     alt=""
                   />
